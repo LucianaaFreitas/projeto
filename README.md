@@ -1,4 +1,5 @@
 <h1 align="center"> DevLinks </h1>
+<p align="center">Site responsivo para web e mobile.</p>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -14,7 +15,7 @@
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".github/Cover.png" width="100%">
+  <img alt="projeto DevLinks" src=".github/capa.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
