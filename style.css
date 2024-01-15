@@ -11,16 +11,23 @@
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moom-stars.svg);
+  
 }
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.05);
+  --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
 }
+
+/*colocando a mudança no hover*/
+
+
+
+
 body {
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
@@ -69,12 +76,18 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back .2s;
 }
 .light #switch button{
-  right: 0;
-  left: initial;
+  animation: slide-in .4s forwards;
 
 }
+
+#switch button :hover{
+  outline: 8px solid var(--highlight-color);
+}
+
 #switch span {
   display: block;
   width: 64px;
@@ -116,8 +129,9 @@ ul li a {
   transition: background 0.2s;
 }
 ul li a:hover {
-  background: var(--surface-color-hover);
+  background:var(--surface-color-hover)  ;
   border: 1.5px solid var(--text-color);
+  color:#bcbab8;
 }
 #social-links {
   display: flex;
@@ -134,11 +148,12 @@ ul li a:hover {
   padding: 16px;
 
   transition: background 0.2s;
-  border-radius: 50%;
+ 
 }
 #social-links a :hover {
   background: var(--highlight-color);
   padding: 16px;
+  border-radius: 50%;
 }
 footer {
   padding: 24px 0;
@@ -155,4 +170,25 @@ footer {
   .light{
     --bg-url:url(./assets/bg-desktop-light.jpg);
   }
+}
+
+/*animation*/
+@keyframes slide-in {
+  from{
+    left: 0;
+
+  }
+  to{
+    left: 50%;
+
+  }
+}
+@keyframes slide-back {
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
+  
 }
